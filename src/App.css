@@ -1,8 +1,8 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 body {
   background-image: linear-gradient(120deg, #da4aaa 0%, #2375f0 100%);
   color: white;
@@ -38,7 +38,6 @@ form button:hover {
   color: white;
 }
 .todo-container {
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   list-style-type: none;
@@ -60,6 +59,7 @@ form button:hover {
   margin: 3px 300px 3px 300px;
 }
 .filter-todo {
+  height: 55px;
   padding: 1rem;
 }
 .todo li {
@@ -114,13 +114,13 @@ select {
 .select {
   margin: 1rem;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 select {
   color: #ff6f47;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
-  width: 12rem;
+  width: 10rem;
 }
 /* Arrow */
 .select::after {
@@ -133,9 +133,67 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
-/* Transition */
-/*
-  .select:hover::after {
-    transform: scale(1.5);
+
+@media screen and (max-width: 960px) {
+  header,
+  form {
+    /* min-height: 20vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  */
+  h1 {
+    text-align: center;
+  }
+  body {
+    background-image: linear-gradient(120deg, #da4aaa 0%, #2375f0 100%);
+    background-attachment: fixed;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    /* min-height: 100vh; */
+  }
+  header,
+  form {
+    width: 505px;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+  }
+  form input,
+  form button {
+    width: 232px;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+  }
+  form button {
+    color: #ff6f47;
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  form button:hover {
+    background: #ff6f47;
+    color: white;
+  }
+  .todo-container {
+    /* justify-content: center; */
+    /* align-items: center; */
+    list-style-type: none;
+    margin-left: -138px;
+  }
+  .todo {
+    margin: 0.5rem;
+    background: white;
+    font-size: 2rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+    margin: 3px 300px 3px 300px;
+  }
+}
